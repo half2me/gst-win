@@ -24,7 +24,9 @@ install:
   - git clone https://github.com/ishmael1985/gstreamer-media-SDK.git
   - cd gstreamer-media-SDK
   - pip install meson ninja
-  - set PKG_CONFIG_PATH=%GSTREAMER_1_0_ROOT_X86_64%lib\pkgconfig
+  - dir C:\Gstreamer
+  - dir C:\
+  - set PKG_CONFIG_PATH=C:\Gstreamer\lib\pkgconfig
   - set
   - meson ../msdk_build
 
