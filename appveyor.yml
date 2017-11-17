@@ -11,6 +11,7 @@ init:
   - cmd: set PATH=%PYTHON3%;%PYTHON3%\scripts;%PATH%
 
 install:
+  - ps: choco install -y -r pkgconfiglite
   - git clone https://github.com/ishmael1985/gstreamer-media-SDK.git
   - cd gstreamer-media-SDK
   - pip install meson ninja
