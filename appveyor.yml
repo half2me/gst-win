@@ -3,9 +3,16 @@ os: Visual Studio 2015
 
 platform: x64
 
+environment:
+  PYTHON3: "C:\\Python36"
+  PIP3: C:\\Python36\Scripts\pip
+  
+init:
+  - cmd: set PATH=%PYTHON3%;%PYTHON3%\scripts;%PATH%
+
 install:
-  - dir C:\Python36-x64
+  - where python
+  - where pip
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
-  - python3 --version
 
 build: off
