@@ -11,8 +11,8 @@ init:
   - cmd: set PATH=%PYTHON3%;%PYTHON3%\scripts;%PATH%
 
 install:
-  - where python
-  - where pip
+  - pip --version
+  - pip install meson ninja
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
 
 build: off
