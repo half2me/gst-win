@@ -13,6 +13,8 @@ init:
 install:
   - pip --version
   - pip install meson ninja
+  - where meson
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+  - where meson
 
 build: off
