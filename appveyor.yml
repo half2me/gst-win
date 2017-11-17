@@ -21,10 +21,17 @@ install:
       Write-Host "Installing..."
       cmd /c start /wait msiexec /package $msiPath /passive ADDLOCAL=ALL
       Write-Host "Installed" -ForegroundColor Green
+  - ps: |
+      Write-Host "Installing Intel Media SDK..." -ForegroundColor Cyan
+      $msiPath = "$($env:USERPROFILE)\Intel_Media_SDK_2017_R1.msi"
+      Write-Host "Downloading..."
+      (New-Object Net.WebClient).DownloadFile('https://s3.amazonaws.com/uploads.hipchat.com/335237/4716904/bzlVHi6OTbIddgf/Intel_Media_SDK_2017_R1.msi', $msiPath)
+      Write-Host "Installing..."
+      cmd /c start /wait msiexec /package $msiPath /passive ADDLOCAL=ALL
+      Write-Host "Installed" -ForegroundColor Green
   - git clone https://github.com/ishmael1985/gstreamer-media-SDK.git
   - cd gstreamer-media-SDK
   - pip install meson ninja
-  - dir C:\gstreamer\1.0\x86_64\
   - set PKG_CONFIG_PATH=C:\Gstreamer\1.0\x86_64\lib\pkgconfig
   - set
   - meson ../msdk_build
