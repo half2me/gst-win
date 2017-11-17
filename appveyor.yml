@@ -33,6 +33,7 @@ install:
   - cd gstreamer-media-SDK
   - pip install meson ninja
   - set PKG_CONFIG_PATH=C:\Gstreamer\1.0\x86_64\lib\pkgconfig
+  - set INTELMEDIASDKROOT="C:\Program Files (x86)\IntelSWTools\Intel(R)_Media_SDK_2017.0.1"
   - set
   - meson ../msdk_build
 
