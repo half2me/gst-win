@@ -11,6 +11,8 @@ msystem: MINGW64
 buildtool: msbuild
 
 install:
-  - "C:\Program Files (x86)\MSBuild\14.0\Bin\msbuild.exe" /p:Configuration=Release /p:Platform=x64 something.sln
+  - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+  - set
+  - where cl.exe
 
 build: off
