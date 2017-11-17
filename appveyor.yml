@@ -18,6 +18,8 @@ install:
   - cd gstreamer-media-SDK
   - pip install meson ninja
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+  - set PKG_CONFIG_PATH=%GSTREAMER_1_0_ROOT_X86_64%lib\pkgconfig
+  - set
   - meson ../msdk_build
 
 build: off
