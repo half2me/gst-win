@@ -1,6 +1,16 @@
+version: '{build}'
+os: Visual Studio 2015
+
 platform: x64
 
+compiler: msvc2015
+
+msys2_arch: x86_64
+msys2_dir: msys64
+msystem: MINGW64
+buildtool: msbuild
+
 install:
-  - echo hi
+  - "C:\Program Files (x86)\MSBuild\14.0\Bin\msbuild.exe" /p:Configuration=Release /p:Platform=x64 something.sln
 
 build: off
