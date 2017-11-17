@@ -12,6 +12,8 @@ init:
 
 install:
   - ps: choco install -y -r pkgconfiglite
+  - ps: Start-FileDownload 'https://gstreamer.freedesktop.org/data/pkg/windows/1.12.3/gstreamer-1.0-devel-x86_64-1.12.3.msi'
+  - msiexec /i "gstreamer-1.0-devel-x86_64-1.12.3.msi"
   - git clone https://github.com/ishmael1985/gstreamer-media-SDK.git
   - cd gstreamer-media-SDK
   - pip install meson ninja
