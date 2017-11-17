@@ -11,10 +11,10 @@ init:
   - cmd: set PATH=%PYTHON3%;%PYTHON3%\scripts;%PATH%
 
 install:
-  - pip --version
+  - git clone https://github.com/ishmael1985/gstreamer-media-SDK.git
+  - cd gstreamer-media-SDK
   - pip install meson ninja
-  - where meson
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
-  - where meson
+  - meson ../msdk_build
 
 build: off
