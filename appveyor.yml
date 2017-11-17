@@ -4,8 +4,9 @@ os: Visual Studio 2015
 platform: x64
 
 install:
+  - git clone https://github.com/ishmael1985/gstreamer-media-SDK.git
+  - cd gstreamer-media-SDK
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
-  - set
-  - python --version
+  - python3 --version
 
 build: off
